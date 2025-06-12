@@ -8,7 +8,7 @@ const Hero = () => {
   {
     title: "Ductile Iron & PVC Pipes",
     subtitle: "Flanged and Fittings for all Water Supply & Sewerage Govt Projects",
-    image: "https://www.colglo.co.uk/wp-content/uploads/2024/07/AdobeStock_329185759-copy.jpeg"
+    image: "https://rashmimetaliks.com/wp-content/uploads/2021/09/MG_1171.jpg"
   },
   {
     title: "Bulk Supplier for Infrastructure",

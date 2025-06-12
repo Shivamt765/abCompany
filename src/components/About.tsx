@@ -1,5 +1,6 @@
 import React from 'react';
 import { Users, Award, Clock, Shield } from 'lucide-react';
+import irrigation from '../img/irrigation.jpg';
 
 const About = () => {
   const features = [
@@ -43,7 +44,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+             src={irrigation} alt="Irrigation"
               alt="Our Team"
               className="rounded-2xl shadow-2xl w-full h-96 object-cover hover:scale-105 transition-transform duration-300"
             />
