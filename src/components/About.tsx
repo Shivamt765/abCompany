@@ -32,6 +32,9 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Abhishek & Company
           </h2>
+           <div className="inline-block bg-green text-green-800  font-semibold px-4 py-1 rounded-full shadow-sm mb-4">
+          <h1>✅ BIS Certified </h1>
+        </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Leading provider of comprehensive piping solutions with over two decades of excellence in the industry
           </p>

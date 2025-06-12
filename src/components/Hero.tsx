@@ -13,12 +13,12 @@ const Hero = () => {
   {
     title: "Bulk Supplier for Infrastructure",
     subtitle: "Trusted partner for large-scale government and private projects",
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://img.freepik.com/free-photo/observation-urban-building-business-steel_1127-2397.jpg?ga=GA1.1.934559536.1745751303&semt=ais_hybrid&w=740"
   },
   {
     title: "Consulting & Construction Works",
     subtitle: "Professional services for end-to-end project execution and pipe system design",
-    image: "https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://www.clarisdesignbuild.com/wp-content/uploads/2023/10/Untitled-1500-%C3%97-800-px-52.jpg"
   }
 ];
 
