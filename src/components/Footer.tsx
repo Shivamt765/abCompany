@@ -168,10 +168,17 @@ return (
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-gray-400 text-center md:text-left">
             © {currentYear} Abhishek & Company. All rights reserved.
-            Built with excellence for piping solutions. Developed by{' '}
-            <a href="https://nextgenscale.in" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
-              NextGen Scale
-            </a>
+ Built with{' '}
+  <span className="inline-block animate-pulse text-red-500 mx-1">Love ❤️</span>
+  by{' '}
+  <a
+    href="https://nextgenscale.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-orange-500 font-semibold text-base hover:underline hover:text-orange-600 transition-colors duration-300"
+  >
+    NextGen Scale
+  </a>
           </p>
           <div className="flex space-x-6 text-sm text-gray-400">
             <button onClick={() => openModal('privacy')} className="hover:text-orange-500 transition-colors">
