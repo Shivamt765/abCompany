@@ -44,7 +44,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-             src={irrigation} alt="Irrigation"
+              src="/irrigation.jpg"
               alt="Our Team"
               className="rounded-2xl shadow-2xl w-full h-96 object-cover hover:scale-105 transition-transform duration-300"
             />

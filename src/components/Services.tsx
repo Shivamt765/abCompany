@@ -6,7 +6,7 @@ const Services = () => {
   const services = [
       {
       icon: Building,
-      title: "Government Project Supplier",
+      title: "Government Project and Bulk Supplier",
       description: "Trusted supplier for large-scale government infrastructure projects with certified materials and timely delivery.",
       features: ["Infrastructure Supply", "Bulk Material Provision", "Quality Certification", "Project Management"],
       image: "https://rashmimetaliks.com/wp-content/uploads/2021/09/MG_1171.jpg"
@@ -120,9 +120,9 @@ const Services = () => {
                   </div>
                 </div>
 
-                <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500">
+                {/* <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

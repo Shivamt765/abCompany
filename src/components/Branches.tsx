@@ -5,11 +5,11 @@ const Branches = () => {
   const branches = [
     {
       name: "Lucknow Branch",
-      address: "1177, Shivpura Banthara Lucknow.",
+      address: " B- 416, 4th Floor,Emaar Gomti Greens Lucknow-226010",
       phone: "+91 9415249002",
       // email: "mumbai@abhishekcompany.com",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",
-      image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+      image: "/lko.jpg"
     },
     {
       name: "Ghaziabad Branch",
@@ -17,7 +17,7 @@ const Branches = () => {
       phone: "+91 9415249002",
       email: "delhi@abhishekcompany.com",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",
-      image: "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+      image: "/ghz.jpg"
     },
     {
       name: "Bhopal Branch",
@@ -25,7 +25,7 @@ const Branches = () => {
       phone: "+91 9415249002",
       email: "pune@abhishekcompany.com",
       hours: "Mon-Sat: 9:00 AM - 7:00 PM",
-      image: "https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+      image: "/bhp.jpg"
     },
     // {
     //   name: "Bangalore Branch",
@@ -112,12 +112,18 @@ const Branches = () => {
               Can't find a branch near you? Contact our head office for support in your area.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Request New Branch
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                Franchise Opportunities
-              </button>
+            <a href="#contact">
+  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+    Request New Branch
+  </button>
+</a>
+
+<a href="#contact">
+  <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+    Franchise Opportunities
+  </button>
+</a>
+
             </div>
           </div>
         </div>

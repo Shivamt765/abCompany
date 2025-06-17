@@ -1,73 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, Send, Clock, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-
-  try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbyAbYMCEOWZciXA5pjDYUP23ooSNiivdx9qZeABWKSMXSxK4wRFPbuAVybJGE-XhFVo/exec",{
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    console.log("Response:", result);
-
-    if (result.status === "success") {
-      alert("Thank you for your inquiry! We will contact you soon.");
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } else {
-      alert("Submission failed. Please try again.");
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Something went wrong. Please try again later.");
-  }
-};
-
-
   const contactInfo = [
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9415249002", "+91-5223140495"],
+      details: ["+91 9415249002"],
       description: "Available 24/7 for emergency support"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@abhishekcompany.com", "support@abhishekcompany.com"],
+      details: ["abhishekcompanyinfo@gmail.com"],
       description: "Quick response within 2 hours"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: [" B- 416, 4th Floor,Emaar Gomti Greens Lucknow-226010"],
+      details: ["B- 416, 4th Floor, Emaar Gomti Greens, Lucknow-226010"],
       description: "Head office open Mon-Sat"
     },
     {
@@ -82,15 +33,14 @@ const handleSubmit = async (e: React.FormEvent) => {
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 to-blue-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In Touch
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to start your project? Contact us for a free consultation and quote
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Info */}
           <div className="space-y-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
@@ -105,17 +55,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                         <info.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">
-                          {info.title}
-                        </h4>
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-300 mb-1">
-                            {detail}
-                          </p>
+                        <h4 className="text-lg font-semibold text-white mb-2">{info.title}</h4>
+                        {info.details.map((detail, i) => (
+                          <p key={i} className="text-gray-300 mb-1">{detail}</p>
                         ))}
-                        <p className="text-sm text-gray-400 mt-2">
-                          {info.description}
-                        </p>
+                        <p className="text-sm text-gray-400 mt-2">{info.description}</p>
                       </div>
                     </div>
                   </div>
@@ -123,6 +67,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
             </div>
 
+            {/* Emergency Box */}
             <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Emergency Services</h3>
               <p className="mb-4">
@@ -135,39 +80,40 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
           </div>
 
+          {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Send us a Message
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Book an Appointment</h3>
+            <form
+              action="https://formsubmit.co/abhishekcompanyinfo@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Hidden Config Fields */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="New Inquiry from Website Contact Form" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you" />
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -175,30 +121,22 @@ const handleSubmit = async (e: React.FormEvent) => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
                     required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                     placeholder="+91 98765 43210"
                   />
                 </div>
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Required
-                  </label>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Service Required</label>
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select a service</option>
                     <option value="water-supply">Water Supply Systems</option>
@@ -211,17 +149,13 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
-                </label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
                   placeholder="Tell us about your project requirements..."
                 ></textarea>
               </div>
@@ -231,7 +165,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105 group"
               >
                 <Send className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                <span>Send Message</span>
+                <span>Book an Appointment</span>
               </button>
             </form>
           </div>
