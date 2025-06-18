@@ -140,10 +140,10 @@ const Header = () => {
                       Image Tab
                     </button>
                     <button
-                      onClick={() => openModal('About Owner', aboutOwnerContent)}
+                      onClick={() => openModal('About Managing Director', aboutOwnerContent)}
                       className="block w-full text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      About Owner
+                      Managing Director
                     </button>
                   </div>
                 )}
@@ -183,10 +183,10 @@ const Header = () => {
                   Image Tab
                 </button>
                 <button
-                  onClick={() => openModal('About Owner', aboutOwnerContent)}
+                  onClick={() => openModal('About Managing Director', aboutOwnerContent)}
                   className="block w-full text-left text-sm px-2 py-1 hover:bg-gray-100"
                 >
-                  About Owner
+                  Managing Director 
                 </button>
               </div>
               {navItems.map((item) => (
