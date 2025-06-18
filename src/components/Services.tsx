@@ -120,9 +120,13 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500">
-                  Learn More
-                </button> */}
+               <a
+  href="#contact"
+  className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500"
+>
+  Get in Touch
+</a>
+
               </div>
             </div>
           ))}
