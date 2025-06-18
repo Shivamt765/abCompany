@@ -75,8 +75,12 @@ return (
         <div className="space-y-6">
           <div className="flex items-center space-x-2">
             <Wrench className="h-8 w-8 text-orange-500" />
- <img src="/logo.jpg"  alt="Abhishek & Company Logo"  className={`h-16 w-auto object-contain transition-all duration-300`}
-              />
+ {/* <img src="/logo.jpg"  alt="Abhishek & Company Logo"  className={`h-16 w-auto object-contain transition-all duration-300`} /> */}
+ <h1 className={`text-2xl font-bold tracking-wide transition-all duration-300`}>
+  Abhishek & Company
+</h1>
+
+              
           </div>
           <p className="text-gray-300 leading-relaxed">
             Leading provider of comprehensive piping solutions with over two decades

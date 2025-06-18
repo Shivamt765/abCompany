@@ -115,7 +115,11 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <Wrench className={`h-8 w-8 ${scrolled ? 'text-blue-800' : 'text-white'} transition-colors`} />
-              <img src={logo} alt="Abhishek & Company Logo" className={`h-16 w-auto object-contain transition-all duration-300 ${scrolled ? '' : 'invert'}`} />
+              {/* <img src={logo} alt="Abhishek & Company Logo" className={`h-16 w-auto object-contain transition-all duration-300 ${scrolled ? '' : 'invert'}`} /> */}
+              <h1 className={`text-2xl font-bold tracking-wide transition-all duration-300 ${scrolled ? 'text-black' : 'text-white'}`}>
+  Abhishek & Company
+</h1>
+
             </div>
 
             <nav className="hidden md:flex space-x-6 items-center">
