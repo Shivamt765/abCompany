@@ -60,7 +60,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+  
     { name: 'Services', href: '#services' },
     { name: 'Our Branches', href: '#branches' },
     { name: 'Contact', href: '#contact' },
@@ -167,9 +167,9 @@ const Header = () => {
 
           {isOpen && (
             <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 py-4 space-y-2">
-              <button onClick={() => scrollToSection('#home')} className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-orange-500">
+              {/* <button onClick={() => scrollToSection('#home')} className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-orange-500">
                 Home
-              </button>
+              </button> */}
               <div className="px-4">
                 <span className="block text-gray-700 font-semibold mb-2">About Us</span>
                 <button
