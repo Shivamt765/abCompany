@@ -88,23 +88,21 @@ const Header = () => {
         className="w-72 h-72 rounded-xl object-cover shadow-lg"
       />
       <div className="text-gray-700 text-sm md:text-base leading-relaxed max-w-xl">
-        <h2 className="text-2xl font-semibold text-orange-600 mb-2">Abhishek - Founder</h2>
-        <p className="mb-2">
-          <strong>Abhishek</strong>, the founder of <strong>Abhishek & Company</strong>, is a passionate entrepreneur
-          with deep expertise in the construction and plumbing industry.
-        </p>
-        <p className="mb-2">
-          With over 5 years of hands-on experience, he started this venture to bring quality, trust,
-          and modern solutions to individual home builders and contractors across tier 2 and 3 cities.
-        </p>
-        <p className="mb-2">
-          He believes in solving real-world problems with honest service and a practical mindset. 
-          He builds long-term relationships by offering transparent advice, durable products, and dependable support.
-        </p>
-        <p>
-          When not at the shop or worksite, he explores new technologies and looks for ways to simplify the home-building experience for everyday people.
-        </p>
-      </div>
+  <h2 className="text-2xl font-semibold text-orange-600 mb-2">Abhishek - Managing Director</h2>
+  <p className="mb-2">
+    <strong>Mr. Abhishek Singh</strong>, the Managing Director of <strong>Abhishek & Company</strong>, is a dynamic leader with a strong vision and a deep understanding of the construction and plumbing industry.
+  </p>
+  <p className="mb-2">
+    With over 5 years of hands-on experience, he has transformed the company into a trusted name by introducing modern techniques, improving operational efficiency, and ensuring customer satisfaction across tier 2 and tier 3 cities.
+  </p>
+  <p className="mb-2">
+    Known for his problem-solving mindset and people-first leadership, he focuses on transparent communication, long-term partnerships, and providing top-quality products and services.
+  </p>
+  <p>
+    Outside of his professional responsibilities, he actively explores innovations in the building sector to make the construction process easier and more affordable for the common man.
+  </p>
+</div>
+
     </div>
   );
 
