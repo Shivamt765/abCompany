@@ -126,9 +126,11 @@ const About = () => {
               🙏 Proud Contribution to Ram Mandir
             </h3>
             <p className="text-lg text-yellow-700 leading-relaxed">
-              Abhishek & Company takes immense pride in contributing to the sacred Ram Mandir Project in Ayodhya. 
-              From high-quality piping solutions to expert consultation, it was an honor to serve a cause of such national and spiritual importance.
-            </p>
+  Abhishek & Company takes immense pride in contributing to the sacred Ram Mandir Project in Ayodhya. <br />
+  From high-quality piping solutions and expert consultation to civil work, Makarana marble supply, and construction services, 
+  it was an honor to serve a cause of such national and spiritual importance.
+</p>
+
             <p className="text-yellow-800 font-medium">
               🇮🇳 Dedicated to building the nation, one project at a time.
             </p>
@@ -163,7 +165,13 @@ const About = () => {
               Our Dynamic Managing Director
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>Mr. Abhishek Singh</strong>, the Managing Director of <strong>Abhishek & Company</strong>, is spearheading the brand's growth with strategic innovation, cutting-edge solutions, and a strong commitment to customer satisfaction.
+            <p className="text-lg text-gray-700 leading-relaxed">
+  <strong>Mr. Abhishek Singh</strong>, the Managing Director of <strong>Abhishek & Company</strong>, is spearheading the brand's growth with strategic innovation, cutting-edge solutions, and a strong commitment to customer satisfaction. 
+  Under his leadership, the company has expanded its footprint across multiple states, taking on major infrastructure and civil projects with a focus on quality and timely execution. 
+  His hands-on approach, technical knowledge, and dedication to excellence ensure that every project reflects the company's core values. 
+  Beyond business, Mr. Singh is known for his approachable personality, ethical leadership, and deep involvement in every stage—from planning to execution—which has earned him respect across clients, team members, and industry peers alike.
+</p>
+
             </p>
           </div>
         </div>
