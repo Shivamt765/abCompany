@@ -71,7 +71,7 @@ const About = () => {
             About Abhishek & Company
           </h2>
           <div className="inline-block bg-green-100 text-green-800 font-semibold px-4 py-1 rounded-full shadow-sm mb-4">
-            ✅ BIS Certified
+            ✅ We are also in BIS Certification
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Leading provider of comprehensive piping solutions with over two decades of excellence in the industry.
