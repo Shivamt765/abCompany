@@ -1,10 +1,9 @@
-import React from 'react';
+""import React from 'react';
 import { Droplets, Building, Users, Hammer, AlertTriangle, Wrench, Leaf } from "lucide-react";
-
 
 const Services = () => {
   const services = [
-      {
+    {
       icon: Building,
       title: "Government Project and Bulk Supplier",
       description: "Trusted supplier for large-scale government infrastructure projects with certified materials and timely delivery.",
@@ -25,7 +24,6 @@ const Services = () => {
       features: ["Pipeline Installation", "Water System Design", "Leak Detection & Repair", "Pressure Testing"],
       image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
     },
-  
     {
       icon: Users,
       title: "Consulting",
@@ -38,17 +36,17 @@ const Services = () => {
       title: "Construction",
       description: "Full-scale construction services for piping systems with skilled workforce and modern equipment.",
       features: ["Installation Services", "Site Preparation", "Quality Assurance", "Post-Installation Support"],
-      image:"https://www.autodesk.com/blogs/construction/wp-content/uploads/2024/07/140-Common-Construction-Terms-to-Know.jpg"
+      image: "https://www.autodesk.com/blogs/construction/wp-content/uploads/2024/07/140-Common-Construction-Terms-to-Know.jpg"
     },
     {
-      icon: AlertTriangle, // Placeholder icon
+      icon: AlertTriangle,
       title: "Fire Fighting",
       description: "Reliable fire fighting piping systems for residential, commercial, and industrial safety with ISI-certified equipment.",
       features: ["ISI Certified Materials", "Hydrant Systems", "Sprinkler Networks", "Pressure Pumps"],
       image: "https://media.istockphoto.com/id/1313773483/photo/action-portrait-of-male-and-female-firefighting-hose-team.jpg?s=612x612&w=0&k=20&c=yvOeisWZMyaDRdbWhuBsVohoK0TIu0ICJy4KFZl8ODs="
     },
     {
-      icon: Wrench, // Replace with a real hardware icon if needed
+      icon: Wrench,
       title: "Hardware Tools",
       description: "Supplying a broad range of high-quality hardware tools for construction, plumbing, and maintenance work.",
       features: ["Construction Tools", "Plumbing Kits", "Power Tools", "Safety Equipment"],
@@ -59,11 +57,11 @@ const Services = () => {
       title: "Ready Mix Concrete Plant",
       description: "On-demand concrete supply for small and large construction projects using modern batching technology.",
       features: ["High Strength Mix", "On-Time Delivery", "Computerized Batching", "Bulk Orders Available"],
-      image:"https://content.jdmagicbox.com/comp/sangli/z2/9999px233.x233.200205222621.e3z2/catalogue/vision-ready-mix-concrete-plant-sangli-cmtaqsr8ay.jpg"
+      image: "https://content.jdmagicbox.com/comp/sangli/z2/9999px233.x233.200205222621.e3z2/catalogue/vision-ready-mix-concrete-plant-sangli-cmtaqsr8ay.jpg"
     },
     {
-      icon: Leaf, // Representing organic products
-      title: "World-Class Organic Products (Upcoming)",
+      icon: Leaf,
+      title: "BarniFarms a World-Class Organic Products (Upcoming)",
       description: "Launching soon – a range of premium organic food items including traditional pickles, natural vinegar, and spices.",
       features: ["100% Natural", "No Preservatives", "Traditional Recipes", "Eco-Friendly Packaging"],
       image: "http://veryrareonline.com/wp-content/uploads/2018/10/ORganic-food.jpg"
@@ -101,9 +99,21 @@ const Services = () => {
               </div>
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
+                {service.title.includes("BarniFarms") ? (
+                  <a
+                    href="https://barnifarms.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl font-bold text-blue-700 underline mb-4 block hover:text-orange-600 transition-colors"
+                  >
+                    {service.title}
+                  </a>
+                ) : (
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                )}
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
@@ -120,13 +130,12 @@ const Services = () => {
                   </div>
                 </div>
 
-               <a
-  href="#contact"
-  className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500"
->
-  Get in Touch
-</a>
-
+                <a
+                  href="#contact"
+                  className="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 group-hover:bg-orange-500"
+                >
+                  Get in Touch
+                </a>
               </div>
             </div>
           ))}
@@ -135,6 +144,5 @@ const Services = () => {
     </section>
   );
 };
-
 
 export default Services;
